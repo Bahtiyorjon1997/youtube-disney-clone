@@ -5,7 +5,7 @@ function App() {
   return (
     <div className="App">
       <h1>
-        <a href="">This is gonna be youtube disney clone</a>{" "}
+        <a href="">This is gonna be youtube disney clone</a>
       </h1>
     </div>
   );
