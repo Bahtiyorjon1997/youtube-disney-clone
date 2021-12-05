@@ -1,12 +1,14 @@
 import React from "react";
 import styled from "styled-components";
+import ctaLogo from "../images/cta-logo-one.svg";
 
 const Login = (props) => {
   return (
     <Container>
       <Content>
         <CTA>
-          <CTALogoOne src="/images/cta-logo-one.png" alt="" />
+          <CTALogoOne src={ctaLogo} alt="" />
+          <SignUp>GET IT ALL THERE</SignUp>
         </CTA>
         <BgImage />
       </Content>
@@ -46,7 +48,39 @@ const BgImage = styled.div`
   right: 0;
   z-index: -1;
 `;
-const CTA = styled.div``;
+const CTA = styled.div`
+  margin-bottom: 2vw;
+  max-width: 650px;
+  flex-wrap: wrap;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: 0;
+  margin-right: auto;
+  margin-left: auto;
+  transition-timing-function: ease-out;
+  transition: opacity 0.2s;
+  width: 100%;
+`;
 
-const CTALogoOne = styled.img``;
+const CTALogoOne = styled.img`
+  display: block;
+  max-width: 600px;
+  min-height: 1px;
+  width: 100%;
+  margin-bottom: 12px;
+`;
+
+const SignUp = styled.a`
+  font-weight: bold;
+  color: #f9f9f9;
+  background-color: #0063e5;
+  margin-bottom: 12px;
+  width: 100%;
+  letter-spacing: 1.5px;
+  font-size: 18px;
+`;
+
 export default Login;
