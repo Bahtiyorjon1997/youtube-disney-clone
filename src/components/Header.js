@@ -2,6 +2,11 @@ import React from "react";
 import styled from "styled-components";
 import logo from "../images/logo.svg";
 import homeIcon from "../images/home-icon.svg";
+import searchIcon from "../images/search-icon.svg";
+import movieIcon from "../images/movie-icon.svg";
+import originalIcon from "../images/original-icon.svg";
+import seriesIcon from "../images/series-icon.svg";
+import watchlistIcon from "../images/watchlist-icon.svg";
 
 const Header = (props) => {
   return (
@@ -13,6 +18,26 @@ const Header = (props) => {
         <a href="/home">
           <img src={homeIcon} alt="" />
           <span>HOME</span>
+        </a>
+        <a href="/search">
+          <img src={searchIcon} alt="" />
+          <span>SEARCH</span>
+        </a>
+        <a href="/watch">
+          <img src={watchlistIcon} alt="" />
+          <span>WATCHLIST</span>
+        </a>
+        <a href="/original">
+          <img src={originalIcon} alt="" />
+          <span>ORIGINALS</span>
+        </a>
+        <a href="/movies">
+          <img src={movieIcon} alt="" />
+          <span>MOVIES</span>
+        </a>
+        <a href="/series">
+          <img src={seriesIcon} alt="" />
+          <span>SERIES</span>
         </a>
       </NavMenu>
     </Nav>
