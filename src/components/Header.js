@@ -7,8 +7,13 @@ import movieIcon from "../images/movie-icon.svg";
 import originalIcon from "../images/original-icon.svg";
 import seriesIcon from "../images/series-icon.svg";
 import watchlistIcon from "../images/watchlist-icon.svg";
+import { firebase } from "../firebase";
+import db from "../firebase";
 
 const Header = (props) => {
+  const handleAuth = () => {
+    // auth.signWithPopUp();
+  };
   return (
     <Nav>
       <Logo>
@@ -145,6 +150,7 @@ const Login = styled.a`
   border: 1px solid #f9f9f9;
   border-radius: 4px;
   transition: all 0.2s ease-out 0s;
+  cursor: pointer;
 
   &:hover {
     background-color: #f9f9f9;
