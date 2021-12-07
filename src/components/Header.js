@@ -7,12 +7,20 @@ import movieIcon from "../images/movie-icon.svg";
 import originalIcon from "../images/original-icon.svg";
 import seriesIcon from "../images/series-icon.svg";
 import watchlistIcon from "../images/watchlist-icon.svg";
-import { firebase } from "../firebase";
-import db from "../firebase";
+import firebase from "firebase";
 
 const Header = (props) => {
   const handleAuth = () => {
-    // auth.signWithPopUp();
+    const googleProvider = new firebase.auth.GoogleAuthProvider();
+    firebase
+      .auth()
+      .signInWithPopup(googleProvider)
+      .then((re) => {
+        console.log(re);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
   };
   return (
     <Nav>
@@ -45,7 +53,7 @@ const Header = (props) => {
           <span>SERIES</span>
         </a>
       </NavMenu>
-      <Login>Login</Login>
+      <Login onClick={handleAuth}>Login</Login>
     </Nav>
   );
 };
